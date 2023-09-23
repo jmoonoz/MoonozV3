@@ -8,29 +8,49 @@ function Home() {
       key="/"
       transition={{
         delayChildren: 0.1,
-        staggerChildren: 0.3,
+        staggerChildren: 0.2,
         duration: 2,
       }}
       style={{ width: "100vw" }}
     >
       <Container>
         <Row>
-          <Col sm={12} md={8}>
+          <Col className="col-sm-screen" sm={12} md={8}>
             <div className="slide-subtitle col-direction">
-              <h4 className="name-title">Joel Muñoz</h4>
+              <motion.h4
+                initial={{ opacity: 0, x: "-110%" }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: "-100%", filter: blur(10) }}
+                transition={{ duration: 1.25, ease: "easeInOut" }}
+                className="name-title"
+              >
+                Joel Muñoz
+              </motion.h4>
               <div className="title-line"></div>
             </div>
-            <div className="slide-title">
-              <h2>Creative Designer</h2>
-            </div>
-            <div className="btn-alignment col-direction">
+            <motion.div
+              initial={{ opacity: 0, x: "-100%", filter: "blur(5px)" }}
+              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, x: "-100%", filter: blur(10) }}
+              transition={{ duration: 1.8, ease: "easeInOut" }}
+              className="slide-title"
+            >
+              Creative Designer
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: "-100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "-100%" }}
+              transition={{ duration: 1.25, ease: "easeInOut" }}
+              className="btn-alignment col-direction"
+            >
               <Button variant="outline-danger" href="/About">
                 About Me
               </Button>
               <Button variant="outline-light" href="/">
                 My CV
               </Button>
-            </div>
+            </motion.div>
           </Col>
         </Row>
       </Container>

@@ -43,14 +43,31 @@ h4,
 h5,
 h6,
 .navbar-brand,
-.navbar-link {
+.navbar-link,
+.slide-title {
   font-family: "Oswald", sans-serif;
 }
+
+.name-title,
+.slide-title {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.name-title {
+  font-size: 18px;
+  font-size: 1.2rem;
+  font-weight: 300 !important;
+  letter-spacing: 8px;
+  margin: 0;
+}
+
 
 
 .container {
   max-width: 1110px;
   width: 100% !important;
+  overflow: hidden;
 }
 
 
@@ -131,4 +148,22 @@ svg {
 
 .btn-alignment {
   gap: 20px;
+}
+
+.slide-title {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width:767px) {
+  .col-sm-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide-title {
+    font-size: 50px;
+  }
+
 }

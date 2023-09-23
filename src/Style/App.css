@@ -1,9 +1,134 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/*---------------------------
+	Fonts
+----------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400&family=Lato:wght@300;400;700&family=Oswald:wght@200;300;400;500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  background-image: url("../Images/largeBackground.png");
+  /* background-color: black; */
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  overflow: scroll;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::-webkit-scrollbar,
+.section-style::-webkit-scrollbar {
+  display: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url("../Images/JoelSmallBkgrd.png") !important;
+  }
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.navbar-link {
+  font-family: "Oswald", sans-serif;
+}
+
+
+.container {
+  max-width: 1110px;
+  width: 100% !important;
 }
 
 
 
+
+/*---------------------------
+	Social Menu Icons
+----------------------------*/
+
+.icon-align {
+  z-index: 2 !important;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 30px;
+  top: 65%;
+  height: 260px;
+  justify-content: space-around;
+  align-items: center;
+
+  :is(img) {
+    color: #cacaca;
+    height: 80px;
+    rotate: 180deg;
+  }
+}
+
+.social-line {
+  width: 1px;
+  height: 80px;
+  background-color: #fff;
+}
+
+a {
+  color: #cacaca;
+  overflow: visible;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+
+svg {
+  width: 25px;
+  height: 25px;
+}
+
+@media only screen and (max-width: 991px) {
+  .social-menu {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .icon-align {
+    left: 10px;
+  }
+}
+
+/*---------------------------
+	Home page
+----------------------------*/
+
+.col-direction {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-alignment {
+  gap: 20px;
+}

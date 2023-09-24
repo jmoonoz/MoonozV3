@@ -49,7 +49,7 @@ function Contact() {
       style={{ width: "100vw" }}
     >
       <Container>
-        <Row>
+        <Row className="contact-row">
           <Col sm={9} md={9} lg={9} className="col-hidden">
             <Form ref={form} onSubmit={sendEmail}>
               <Row>

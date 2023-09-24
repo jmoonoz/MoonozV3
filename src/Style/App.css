@@ -188,8 +188,15 @@ svg {
   background-color: #212529;
   color: #ffffff;
 }
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #6c757d!important;
+}
 
 .form-button {
   display: flex;
   justify-content: flex-end;
+}
+.contact-row{
+  justify-content: center;
 }

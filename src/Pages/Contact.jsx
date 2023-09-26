@@ -7,9 +7,10 @@ import {
   Form,
   FloatingLabel,
 } from "react-bootstrap";
+import SectionTitle from "../Components/SectionTitle"
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { slideInLeft, slideInRight, slideUp } from "../Assets/animation";
+import { slideInLeft, slideInRight, slideUp } from "../animation";
 
 const service = import.meta.env.VITE_SERVICE_ID;
 const template = import.meta.env.VITE_TEMPLATE_ID;
@@ -41,14 +42,13 @@ function Contact() {
   return (
     <motion.div
       key="/Contact"
-      transition={{
-        delayChildren: 0.1,
-        staggerChildren: 0.2,
-        duration: 2,
-      }}
+      initial="hidden"
+      animate="show"
+      exit="exit"
       style={{ width: "100vw" }}
     >
       <Container>
+        <SectionTitle title="Contact Me" />
         <Row className="contact-row">
           <Col sm={9} md={9} lg={9} className="col-hidden">
             <Form ref={form} onSubmit={sendEmail}>

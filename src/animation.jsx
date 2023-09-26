@@ -13,6 +13,7 @@ export const slideInLeft = {
       transition: { duration: 3 },
     },
   };
+
   export const slideInRight = {
     hidden: { x: "300%", filter: "blur(5px)" },
     show: {
@@ -28,13 +29,14 @@ export const slideInLeft = {
       transition: { duration: 3 },
     },
   };
+
   export const slideUp = {
     hidden: { y: "100%", filter: "blur(5px)" },
     show: {
       y: 0,
       filter: "blur(0px)",
       ease: "easeIn",
-      transition: { duration: 3 },
+      transition: { duration: 1.5 },
     },
     exit: {
       y: "-100%",

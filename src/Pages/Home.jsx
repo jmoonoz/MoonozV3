@@ -8,7 +8,7 @@ function Home() {
       key="/"
       transition={{
         delayChildren: 0.1,
-        staggerChildren: 0.2,
+        staggerChildren: 3,
         duration: 2,
       }}
       style={{ width: "100vw" }}

@@ -7,7 +7,7 @@ import SectionTitle from "../Components/SectionTitle";
 
 function About() {
   return (
-    <Container>
+    <Container style={{paddingBottom:"5%"}}>
       <motion.div
         key="/"
         initial="hidden"

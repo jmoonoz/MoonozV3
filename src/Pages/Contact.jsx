@@ -48,7 +48,7 @@ function Contact() {
       style={{ width: "100vw" }}
     >
       <Container>
-        <SectionTitle title="Contact Me" />
+        <SectionTitle title="Connect with Me" />
         <Row className="contact-row">
           <Col sm={9} md={9} lg={9} className="col-hidden">
             <Form ref={form} onSubmit={sendEmail}>

@@ -11,7 +11,7 @@ function Home() {
         staggerChildren: 3,
         duration: 2,
       }}
-      style={{ width: "100vw" }}
+      style={{ paddingTop:"25%",width: "100vw" }}
     >
       <Container>
         <Row>

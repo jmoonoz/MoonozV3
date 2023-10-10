@@ -1,38 +1,62 @@
 import { React, useState } from "react";
-import ProjectImg from "../Images/img-1.jpg";
+import ProjectImg from "../Images/JoelDisney.png";
 import { Link } from "react-router-dom";
-import { Card, Offcanvas } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { Card, Image, Offcanvas } from "react-bootstrap";
 
-function ProjectItems({
-  title = "Project Name",
-  img = ProjectImg,
-  desc = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-}) {
+function ProjectItems({ title, img, desc, tool }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  console.log(tool[1]);
+
   return (
-    <>
-      <Card style={{ width: "18rem" }} onClick={handleShow}>
-        <Card.Img variant="top" src={ProjectImg} />
+    <motion.div
+      className="card-Item"
+      whileHover={{
+        scale: 1.1,
+        boxShadowshadow: "1px 6px 20px -4px rgba(255,255,255,0.75)",
+      }}
+    >
+      <Card onClick={handleShow}>
+        <Card.Img variant="top" src={img} />
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <p>Tools used</p>
-          {/* <Card.Text>{desc}</Card.Text> */}
-          {/* <Button variant="primary">Go somewhere</Button> */}
+          <h3>{title}</h3>
+          <div className="tools-Title">Tools used:</div>
+          {/* tools listed here */}
+          <div className="tools">
+            {() => {
+              for (i = 0; i < 3; i++) {
+                return <div className="tools-Item">{tool[i]}</div>;
+              }
+            }}
+            {/* {tool.map((item) => (
+              <div className="tools-Item">{item}</div>
+            ))} */}
+            ...
+          </div>
         </Card.Body>
       </Card>
       <Offcanvas show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <h3>{title}</h3>
         </Offcanvas.Header>
+        <Image src={img} />
         <Offcanvas.Body>
           {desc}
+          <div>
+            Tools used:
+            <div className="tools">
+              {tool.map((item) => (
+                <div className="tools-Item">{item}</div>
+              ))}
+            </div>
+          </div>
         </Offcanvas.Body>
       </Offcanvas>
-    </>
+    </motion.div>
   );
 }
 

@@ -26,7 +26,7 @@ function About() {
                 </motion.div>
               </div>
               <motion.div key="text" variants={slideInLeft}>
-                <p>
+                <p className="about-Text">
                   I'm a first-generation Mexican American graduate with a unique
                   blend of expertise in both computer science and psychology,
                   holding a Bachelor's degree in both fields. With over six
@@ -35,7 +35,7 @@ function About() {
                   work, allowing me to craft user-centric and intuitive web
                   experiences.
                 </p>
-                <p>
+                <p className="about-Text">
                   My technical background in computer science equips me with the
                   skills to turn creative designs into functional and responsive
                   web applications. I thrive on staying at the forefront of
@@ -47,7 +47,7 @@ function About() {
                   psychology, resulting in websites that engage and delight
                   users while achieving business goals.
                 </p>
-                <p>
+                <p className="about-Text">
                   I'm passionate about staying on the cutting edge of web
                   development, embracing new challenges, and collaborating in
                   dynamic environments. Feel free to review my work and reach

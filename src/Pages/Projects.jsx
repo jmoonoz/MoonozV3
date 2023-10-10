@@ -6,6 +6,8 @@ import ProjectInfo from "../Assets/Projects";
 import ProjectItems from "../Components/ProjectItems";
 import { slideInLeft, fadeInOut } from "../animation";
 
+
+
 function Projects() {
   const [searchText, setSearchText] = useState("");
   const [projectData, setProjectData] = useState(ProjectInfo);
@@ -22,17 +24,28 @@ function Projects() {
     e.preventDefault();
     setSearchText(e.target.value);
     if (!e.target.value.length > 0) {
-      setProjectsData(ProjectInfo);
+      setProjectData(ProjectInfo);
     }
   };
+  const preventD = (e) => {
+    e.preventDefault();
+  };
+
+  // console.log(ProjectInfo.tools);
 
   return (
-    <motion.div key="/contact" initial="hidden" animate="show" exit="exit">
+    <motion.div
+      key="/contact"
+      initial="hidden"
+      animate="show"
+      transition={{ staggerChildren: 0.25 }}
+      exit="exit"
+    >
       <Container>
         <SectionTitle title="My Works" />
         <div className="project-search">
           <motion.div variants={fadeInOut}>
-            <form>
+            <form onSubmit={preventD}>
               <input
                 className="form-control"
                 type="text"
@@ -44,21 +57,18 @@ function Projects() {
           </motion.div>
         </div>
         <div className="project-all-item">
-          {ProjectInfo.map((item) => (
+          {projectData.map((item) => (
             <motion.div variants={fadeInOut}>
               <ProjectItems
                 key={item.id}
                 title={item.name}
                 desc={item.desc}
                 img={item.img}
+                tool={item.tools}
               />
             </motion.div>
           ))}
         </div>
-
-        {/* <Row>
-          <Col xs={12}></Col>
-        </Row> */}
       </Container>
     </motion.div>
   );

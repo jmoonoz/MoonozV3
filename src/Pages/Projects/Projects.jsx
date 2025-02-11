@@ -1,10 +1,10 @@
 import { React, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import SectionTitle from "../Components/SectionTitle";
+import SectionTitle from "../../Components/SectionTitle";
 import { Container, Row, Col } from "react-bootstrap";
-import ProjectInfo from "../Assets/Projects";
-import ProjectItems from "../Components/ProjectItems";
-import { slideInLeft, fadeInOut } from "../animation";
+import ProjectInfo from "../../Assets/Projects";
+import ProjectItems from "../../Components/ProjectItems";
+import { slideInLeft, fadeInOut } from "../../animation";
 
 
 
@@ -43,7 +43,7 @@ function Projects() {
     >
       <Container>
         <SectionTitle title="My Works" />
-        <div className="project-search">
+        {/* <div className="project-search">
           <motion.div variants={fadeInOut}>
             <form onSubmit={preventD}>
               <input
@@ -55,7 +55,7 @@ function Projects() {
               />
             </form>
           </motion.div>
-        </div>
+        </div> */}
         <div className="project-all-item">
           {projectData.map((item) => (
             <motion.div variants={fadeInOut}>

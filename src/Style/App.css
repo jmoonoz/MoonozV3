@@ -286,7 +286,15 @@ img {
 .card-img-top{
   object-fit: cover;
   max-height: 180px;
+  filter: grayscale(1);
 }
+
+.card:hover{
+  :is(.card-img-top){
+    filter: grayscale(0);
+  }
+}
+
 
 .projects-item-img {
   width: 100%;

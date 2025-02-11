@@ -4,13 +4,26 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Card, Image, Offcanvas } from "react-bootstrap";
 
+function customMapWithBreak(arr, callback, stopIteration) {
+  const result = [""];
+
+  for (let i = 0; i < arr.length && i < stopIteration; i++) {
+    const mappedValue = String(callback(arr[i])); 
+    result.push(mappedValue);
+  }
+
+  return result;
+}
+
 function ProjectItems({ title, img, desc, tool }) {
+  
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   console.log(tool[1]);
+  const mappedArray = customMapWithBreak(tool, (item) => item * 2, 3);
 
   return (
     <motion.div
@@ -20,21 +33,16 @@ function ProjectItems({ title, img, desc, tool }) {
         boxShadowshadow: "1px 6px 20px -4px rgba(255,255,255,0.75)",
       }}
     >
-      <Card onClick={handleShow}>
+      <Card onClick={handleShow} key={title}>
         <Card.Img variant="top" src={img} />
         <Card.Body>
           <h3>{title}</h3>
           <div className="tools-Title">Tools used:</div>
           {/* tools listed here */}
           <div className="tools">
-            {() => {
-              for (i = 0; i < 3; i++) {
-                return <div className="tools-Item">{tool[i]}</div>;
-              }
-            }}
-            {/* {tool.map((item) => (
-              <div className="tools-Item">{item}</div>
-            ))} */}
+            {mappedArray.map((item, index) => (
+              <div className="tools-Item" key={index}>{item}</div>
+            ))}
             ...
           </div>
         </Card.Body>
@@ -49,8 +57,8 @@ function ProjectItems({ title, img, desc, tool }) {
           <div>
             Tools used:
             <div className="tools">
-              {tool.map((item) => (
-                <div className="tools-Item">{item}</div>
+              {tool.map((item, index) => (
+                <div className="tools-Item" key={index}>{item}</div>
               ))}
             </div>
           </div>

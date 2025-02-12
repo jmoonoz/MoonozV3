@@ -8,15 +8,16 @@ import "./about.scss";
 
 function About() {
   return (
-    <Container style={{paddingBottom:"5%"}}>
-      <motion.div
-        key="/"
-        initial="hidden"
-        animate="show"
-        exit="exit"
-        transition={{ duration: 2, staggerChildren: .15 }}
-      >
-          {/* <SectionTitle title="Get to Know Me" /> */}
+    <motion.div
+      className="about"
+      key="/"
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      transition={{ duration: 2, staggerChildren: 0.15 }}
+    >
+      <Container style={{ paddingBottom: "5%" }}>
+        {/* <SectionTitle title="Get to Know Me" /> */}
         <Row>
           <Col xl={6} lg={6} className="hx-about-content col-hidden">
             <div className="col-about">
@@ -75,8 +76,8 @@ function About() {
             </motion.div>
           </Col>
         </Row>
-      </motion.div>
-    </Container>
+      </Container>
+    </motion.div>
   );
 }
 

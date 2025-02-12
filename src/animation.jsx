@@ -31,18 +31,23 @@ export const slideInLeft = {
   };
 
   export const slideUp = {
-    hidden: { y: "100%", filter: "blur(5px)" },
+    initial: {
+      y: "200%",
+    },
     show: {
       y: 0,
-      filter: "blur(0px)",
-      ease: "easeIn",
-      transition: { duration: 1.5 },
+      transition: {
+        delay: 0.5,
+        duration: 1.2,
+        ease: [0.33, 1, 0.68, 1],
+      },
     },
     exit: {
-      y: "-100%",
-      filter: "blur(5px)",
-      ease: "easeOut",
-      transition: { duration: 3 },
+      y: "-100vh",
+      transition: {
+        duration: .03,
+        ease: [0.33, 1, 0.68, 1],
+      },
     },
   };
   

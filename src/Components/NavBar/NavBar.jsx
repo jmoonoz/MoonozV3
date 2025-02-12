@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
-import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown, Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./navBar.scss"
+import "./navBar.scss";
 import { motion } from "framer-motion";
 import { FaRegFolder } from "react-icons/fa";
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("");
   const [scroll, setScrolled] = useState(false);
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   useEffect(() => {
     const onScroll = () => {
@@ -33,7 +38,17 @@ function NavBar() {
         <div className="navLogo">
           <Link to="/">MNZ</Link>
         </div>
-        <FaRegFolder size={30} />
+        <FaRegFolder onClick={handleShow} size={30} />
+        <Offcanvas placement="end" show={show} onHide={handleClose}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            Some text as placeholder. In real life you can have the elements you
+            have chosen. Like, text, images, lists, etc.
+          </Offcanvas.Body>
+        </Offcanvas>
+
         {/* <motion.div whileHover={{ x: 15, ease: "easeIn" }}>
           <Navbar.Brand href="/">Joel Munoz</Navbar.Brand>
         </motion.div>

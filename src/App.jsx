@@ -4,7 +4,6 @@ import NavBar from "./Components/NavBar/NavBar";
 import AnimatedRoutes from "./Components/AnimatedRoutes";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Style/App.scss";
-import SocialMenu from "./Components/SocialMenu";
 
 function App() {
   return (

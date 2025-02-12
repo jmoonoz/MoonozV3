@@ -1,21 +1,26 @@
 /*---------------------------
 	Fonts
 ----------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400&family=Lato:wght@300;400;700&family=Oswald:wght@200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400&family=Lato:wght@300;400;700&family=Oswald:wght@200;300;400;500;600&display=swap");
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 10%;
 }
+:root {
+  --blk-color: rgb(33, 37, 41);
+  --bk-img-opacity: 1;
+  --white-text: #ffffff;
+  --light-white: #ffffff70;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+}
 
 body {
   overflow: scroll;
   color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 body::-webkit-scrollbar,
@@ -26,7 +31,6 @@ body::-webkit-scrollbar,
 
 @media only screen and (max-width: 767px) {
   body {
-   
   }
 }
 
@@ -41,6 +45,18 @@ h6,
 .slide-title {
   font-family: "Oswald", sans-serif;
 }
+.home,
+.about,
+.contact,
+.project,
+.moonoz,
+.error,
+.index {
+  margin: auto;
+  overflow: hidden;
+  padding-top: 15%;
+  height: 100vh;
+}
 
 p {
   color: #d6d6d6;
@@ -48,35 +64,7 @@ p {
   /* margin-bottom: 0; */
 }
 
-
-.name-title,
-.slide-title {
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.name-title {
-  font-size: 18px;
-  font-size: 1.2rem;
-  font-weight: 300 !important;
-  letter-spacing: 8px;
-  margin: 0;
-}
-
-.container {
-  max-width: 1110px;
-  height: 100vh;
-  padding-top: 10%;
-
-  width: 100vw !important;
-  overflow: scroll;
-}
 @media only screen and (max-width: 545px) {
-  .container{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
 }
 
 .section-title {
@@ -90,7 +78,7 @@ p {
 }
 
 .section-title:hover {
-  color: rgba(0, 0, 0, 0.0);
+  color: rgba(0, 0, 0, 0);
   font-style: italic;
   -webkit-text-stroke: 1px white;
   transition: 100ms ease-in-out;
@@ -107,64 +95,8 @@ p {
 }
 
 
-
-/*---------------------------
-	Social Menu Icons
-----------------------------*/
-
-.icon-align {
-  z-index: 2 !important;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  left: 30px;
-  top: 65%;
-  height: 260px;
-  justify-content: space-around;
-  align-items: center;
-
-  :is(img) {
-    color: #cacaca;
-    height: 80px;
-    rotate: 180deg;
-  }
-}
-
-.social-line {
-  width: 1px;
-  height: 80px;
-  background-color: #fff;
-}
-
-// a {
-//   color: #cacaca;
-//   overflow: visible;
-//   display: inline-block;
-//   vertical-align: middle;
-//   -webkit-transform: perspective(1px) translateZ(0);
-//   transform: perspective(1px) translateZ(0);
-//   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-//   -webkit-transition-duration: 0.3s;
-//   transition-duration: 0.3s;
-//   -webkit-transition-property: transform;
-//   transition-property: transform;
-//   -webkit-transition-timing-function: ease-out;
-//   transition-timing-function: ease-out;
-// }
-
-svg {
-  width: 25px;
-  height: 25px;
-}
-
-img {
-  max-width: 100%;
-}
-
 @media only screen and (max-width: 991px) {
-  .social-menu {
-    display: none !important;
-  }
+  
 }
 
 @media only screen and (max-width: 768px) {
@@ -172,50 +104,15 @@ img {
     left: 10px;
   }
 }
-
-/*---------------------------
-	Home page
-----------------------------*/
-
-.col-direction {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.btn-alignment {
-  gap: 20px;
-}
-
-.slide-title {
-  font-size: 70px;
-  font-weight: 700;
-}
-
-@media only screen and (max-width:767px) {
-  .col-sm-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .slide-title {
-    font-size: 50px;
-  }
-
-}
-
 /*---------------------------
 	About
 ----------------------------*/
-
 
 .hx-about-img {
   padding: 15px;
   border: 1px solid #333;
 }
-.about-Text{
+.about-Text {
   background-color: #0000008f;
   text-shadow: 1px 1px 2px black;
 }
@@ -231,7 +128,7 @@ img {
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid #495057;
-  background: rgba(51, 51, 51, .5);
+  background: rgba(51, 51, 51, 0.5);
   border-radius: 5px;
   color: #ffffff !important;
 }
@@ -266,27 +163,25 @@ img {
   margin-top: 5rem;
 }
 
-
 /*---------------------------
 	Project Item
 ----------------------------*/
 .card {
-  background-color: rgba(51, 51, 51, .5);
+  background-color: rgba(51, 51, 51, 0.5);
   color: white;
 }
 
-.card-img-top{
+.card-img-top {
   object-fit: cover;
   max-height: 180px;
   filter: grayscale(1);
 }
 
-.card:hover{
-  :is(.card-img-top){
+.card:hover {
+  :is(.card-img-top) {
     filter: grayscale(0);
   }
 }
-
 
 .projects-item-img {
   width: 100%;

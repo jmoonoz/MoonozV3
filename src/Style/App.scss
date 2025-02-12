@@ -94,9 +94,7 @@ p {
   }
 }
 
-
 @media only screen and (max-width: 991px) {
-  
 }
 
 @media only screen and (max-width: 768px) {
@@ -240,8 +238,28 @@ p {
 ----------------------------*/
 
 .offcanvas {
+
   color: #fff;
-  background-color: #0000;
+  // background-color: #0000;
+  backdrop-filter: blur(19px) saturate(158%);
+  -webkit-backdrop-filter: blur(19px) saturate(158%);
+  background-color: rgba(47, 56, 58, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  
+  :is(.offcanvas-header) {
+    justify-content: space-between;
+    .navLogo {
+      a {
+        font-size: 25px;
+        font-weight: 900;
+        color: var(--white-text);;
+        transition: ease-in-out 500ms;
+        text-decoration: none;
+        
+      }
+    }
+  }
 
   :is(.offcanvas-body) {
     font-weight: 100;

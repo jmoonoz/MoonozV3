@@ -1,0 +1,20 @@
+.flipLink {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: uppercase;
+  line-height: 0.75;
+  .firstSet {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  div {
+    position: absolute;
+    inset: 0;
+    .secondSet {
+      display: inline-block;
+    }
+  }
+}

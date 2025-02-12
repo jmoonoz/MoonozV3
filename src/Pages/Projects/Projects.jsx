@@ -1,10 +1,11 @@
 import { React, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import SectionTitle from "../../Components/SectionTitle";
+// import SectionTitle from "../../Components/SectionTitle";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectInfo from "../../Assets/Projects";
 import ProjectItems from "../../Components/ProjectItems";
 import { slideInLeft, fadeInOut } from "../../animation";
+import "./projects.scss"
 
 
 
@@ -42,7 +43,7 @@ function Projects() {
       exit="exit"
     >
       <Container>
-        <SectionTitle title="My Works" />
+        {/* < title="My Works" /> */}
         {/* <div className="project-search">
           <motion.div variants={fadeInOut}>
             <form onSubmit={preventD}>

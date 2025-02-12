@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import NavBar from "./Components/NavBar";
+import NavBar from "./Components/NavBar/NavBar";
 import AnimatedRoutes from "./Components/AnimatedRoutes";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Style/App.css";
+import "./Style/App.scss";
 import SocialMenu from "./Components/SocialMenu";
 
 function App() {
@@ -11,7 +11,6 @@ function App() {
     <Router>
       <NavBar />
       <AnimatedRoutes />
-      <SocialMenu />
     </Router>
   );
 }

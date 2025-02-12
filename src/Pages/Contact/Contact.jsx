@@ -7,10 +7,11 @@ import {
   Form,
   FloatingLabel,
 } from "react-bootstrap";
-import SectionTitle from "../Components/SectionTitle"
+// import SectionTitle from "../Components/SectionTitle"
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { slideInLeft, slideInRight, slideUp } from "../animation";
+import { slideInLeft, slideInRight, slideUp } from "../../animation";
+import "./contact.scss"
 
 const service = import.meta.env.VITE_SERVICE_ID;
 const template = import.meta.env.VITE_TEMPLATE_ID;
@@ -48,7 +49,7 @@ function Contact() {
       style={{ width: "100vw" }}
     >
       <Container>
-        <SectionTitle title="Connect with Me" />
+        {/* <SectionTitle title="Connect with Me" /> */}
         <Row className="contact-row">
           <Col sm={9} md={9} lg={9} className="col-hidden">
             <Form ref={form} onSubmit={sendEmail}>

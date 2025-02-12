@@ -1,9 +1,10 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { slideInLeft, slideInRight, fadeInOut } from "../animation";
-import AboutPhoto from "../Images/JoelDisney.png";
-import SectionTitle from "../Components/SectionTitle";
+import { slideInLeft, slideInRight, fadeInOut } from "../../animation";
+import "./about.scss";
+
+// import SectionTitle from "../Components/SectionTitle";
 
 function About() {
   return (
@@ -15,7 +16,7 @@ function About() {
         exit="exit"
         transition={{ duration: 2, staggerChildren: .15 }}
       >
-          <SectionTitle title="Get to Know Me" />
+          {/* <SectionTitle title="Get to Know Me" /> */}
         <Row>
           <Col xl={6} lg={6} className="hx-about-content col-hidden">
             <div className="col-about">
@@ -64,12 +65,12 @@ function About() {
           <Col className="col-img" lg={6} xl={6}>
             <motion.div key="hx-about-img" variants={slideInRight}>
               <div className="hx-about-img">
-                <motion.img
+                {/* <motion.img
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ duration: 0.5 }}
                   src={AboutPhoto}
-                />
+                /> */}
               </div>
             </motion.div>
           </Col>

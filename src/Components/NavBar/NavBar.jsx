@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import "../Style/navBar.css";
+import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./navBar.scss"
 import { motion } from "framer-motion";
+import { FaRegFolder } from "react-icons/fa";
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("");
@@ -31,7 +30,11 @@ function NavBar() {
   return (
     <Navbar expand="md" fixed="top" className={scroll ? "scrolled" : ""}>
       <Container fluid>
-        <motion.div whileHover={{ x: 15, ease: "easeIn" }}>
+        <div className="navLogo">
+          <Link to="/">MNZ</Link>
+        </div>
+        <FaRegFolder size={30} />
+        {/* <motion.div whileHover={{ x: 15, ease: "easeIn" }}>
           <Navbar.Brand href="/">Joel Munoz</Navbar.Brand>
         </motion.div>
         <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
@@ -77,7 +80,7 @@ function NavBar() {
               <div className="hvr-underline-from-left">Contact</div>
             </Nav.Link>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse> */}
       </Container>
     </Navbar>
   );

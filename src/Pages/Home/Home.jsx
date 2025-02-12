@@ -26,7 +26,6 @@ function Home() {
               >
                 Joel Muñoz
               </motion.h4>
-              <div className="title-line"></div>
             </div>
             <motion.div
               initial={{ opacity: 0, x: "-100%", filter: "blur(5px)" }}
@@ -37,20 +36,7 @@ function Home() {
             >
               Creative Designer
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: "-100%" }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: "-100%" }}
-              transition={{ duration: 1.25, ease: "easeInOut" }}
-              className="btn-alignment col-direction"
-            >
-              <Button variant="outline-danger" href="/About">
-                About Me
-              </Button>
-              <Button variant="outline-light" href="/">
-                My CV
-              </Button>
-            </motion.div>
+           
           </Col>
         </Row>
       </Container>

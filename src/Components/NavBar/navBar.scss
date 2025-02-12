@@ -1,0 +1,12 @@
+.navLogo {
+    a {
+      font-size: 25px;
+      font-weight: 900;
+      color: var(--light-white);
+      transition: ease-in-out 500ms;
+      text-decoration: none;
+      &:hover {
+        color: var(--white-text);
+      }
+    }
+  }

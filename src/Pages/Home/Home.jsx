@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { slideUp } from "../../animation";
 import Munoz from "../../Images/mexicoHat.png";
 import "./home.scss";
+import FlipLink from "../../Components/FlipLink/FlipLink";
 
 function Home() {
   const DURATION = 1.8;

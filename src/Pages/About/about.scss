@@ -1,0 +1,61 @@
+.about {
+    letter-spacing: 0.01em;
+    .colAlign{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .secTitle, .techList{
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+    .sectionText{
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    p{
+      a{
+        text-decoration: none !important;
+        color: var(--white-text);
+        font-weight: 300;
+        &:hover{
+          color: none;
+        }
+      }
+     
+    }
+    ul{
+      li{
+        list-style-type: none;
+      }
+    }
+
+    .container-fluid {
+      .row {
+        .col {
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+          div{
+            overflow: hidden;
+          }
+          // p{
+          //   a{
+          //     text-decoration: none !important;
+          //     &:hover{
+          //       color: none;
+          //       font-weight: 500;
+          //     }
+          //   }
+           
+          // }
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+  }
+  

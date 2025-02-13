@@ -6,6 +6,7 @@ const DURATION = 0.25;
 const STAGGER = 0.025;
 
 function FlipLink({ children, href }) {
+  console.log(children);
   return (
     <motion.a
       initial="initial"
@@ -14,7 +15,7 @@ function FlipLink({ children, href }) {
       href={href}
     >
       {/* first set of text */}
-      <div>
+      <div className="firstSet">
         {children.split("").map((l, i) => (
           <motion.span
             variants={{
@@ -22,7 +23,7 @@ function FlipLink({ children, href }) {
                 y: 0,
               },
               hovered: {
-                y: "-100%",
+                y: "-200%",
               },
             }}
             transition={{
@@ -30,7 +31,6 @@ function FlipLink({ children, href }) {
               ease: "easeInOut",
               delay: STAGGER * i,
             }}
-            className="firstSet"
             key={i}
           >
             {l}
@@ -38,12 +38,12 @@ function FlipLink({ children, href }) {
         ))}
       </div>
       {/* second set of text */}
-      <div className="absolute inset-0">
+      <div className="secondSet">
         {children.split("").map((l, i) => (
           <motion.span
             variants={{
               initial: {
-                y: "100%",
+                y: "200%",
               },
               hovered: {
                 y: 0,
@@ -54,7 +54,6 @@ function FlipLink({ children, href }) {
               ease: "easeInOut",
               delay: STAGGER * i,
             }}
-            className="secondSet"
             key={i}
           >
             {l}

@@ -3,8 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { slideInLeft, slideInRight, fadeInOut } from "../../animation";
 import "./about.scss";
-
-// import SectionTitle from "../Components/SectionTitle";
+import TiltCard from "../../Components/TiltCard/TiltCard";
 
 function About() {
   return (
@@ -16,64 +15,71 @@ function About() {
       exit="exit"
       transition={{ duration: 2, staggerChildren: 0.15 }}
     >
-      <Container style={{ paddingBottom: "5%" }}>
-        {/* <SectionTitle title="Get to Know Me" /> */}
+      <Container style={{ paddingBottom: "5%" }} fluid>
         <Row>
-          <Col xl={6} lg={6} className="hx-about-content col-hidden">
-            <div className="col-about">
-              <div className="hx-site-title">
-                <motion.div key="section-title" variants={slideInLeft}>
-                  <span>Expert Web Developer & Designer</span>
-                  <h2 className="section-title">Get to Know Me</h2>
-                </motion.div>
-              </div>
-              <motion.div key="text" variants={slideInLeft}>
-                <p className="about-Text">
-                  I'm a first-generation Mexican American graduate with a unique
-                  blend of expertise in both computer science and psychology,
-                  holding a Bachelor's degree in both fields. With over six
-                  years of experience in the industry, I bring a deep
-                  understanding of user behavior and cognitive processes to my
-                  work, allowing me to craft user-centric and intuitive web
-                  experiences.
-                </p>
-                <p className="about-Text">
-                  My technical background in computer science equips me with the
-                  skills to turn creative designs into functional and responsive
-                  web applications. I thrive on staying at the forefront of
-                  emerging web technologies, ensuring that the websites I build
-                  are not only aesthetically pleasing but also perform
-                  flawlessly across various platforms and devices. My passion
-                  for creating seamless digital experiences is driven by a
-                  commitment to bridging the gap between technology and human
-                  psychology, resulting in websites that engage and delight
-                  users while achieving business goals.
-                </p>
-                <p className="about-Text">
-                  I'm passionate about staying on the cutting edge of web
-                  development, embracing new challenges, and collaborating in
-                  dynamic environments. Feel free to review my work and reach
-                  out to me in the contact page.
-                </p>
-              </motion.div>
-              <motion.div key="btns" variants={slideInLeft} className="btns">
-                <Button variant="outline-light" href="/Contact">
-                  Contact Me
-                </Button>
-              </motion.div>
+          <Col sm={12} md={4}>
+            <div>
+              <TiltCard />
             </div>
           </Col>
-          <Col className="col-img" lg={6} xl={6}>
-            <motion.div key="hx-about-img" variants={slideInRight}>
-              <div className="hx-about-img">
-                {/* <motion.img
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ duration: 0.5 }}
-                  src={AboutPhoto}
-                /> */}
-              </div>
-            </motion.div>
+          <Col className="colAlign" sm={12} md={4}>
+            <div className="secTitle">Designer / Creator</div>
+
+            <p className="sectionText">
+              Joel Muñoz, a graphic designer and web specialist who believes
+              that art knows no limits. As a first-generation Mexican American
+              college graduate, I’ve pushed my creativity from pencil sketches
+              to immersive digital experiences—blending drawn graphics with
+              clean, functional code.
+            </p>
+            <p className="sectionText">
+              With a double major in Psychology and Computer Science, I combine
+              creative vision with analytical thinking to design intuitive,
+              engaging websites. My skills in HTML5, CSS3, Sass, React,
+              Bootstrap, and JavaScript have fueled projects ranging from
+              cloning platforms like Netflix and Spotify to launching my own
+              live site.
+            </p>
+            <p className="sectionText">
+              I also create under my artistic alter ego,{" "}
+              <a href="/Moonoz" className="moonozLink">
+                Moonoz
+              </a>
+              , exploring the intersection of traditional art and digital media.
+              Whether designing graphics or developing websites, I’m passionate
+              about crafting digital spaces that are visually striking,
+              meaningful, and accessible.
+            </p>
+            <p className="sectionText">
+              Today, I’m focused on pushing the boundaries of web development,
+              using technologies like React, Framer Motion, and Wix Studio to
+              build dynamic, modern experiences.
+            </p>
+          </Col>
+          <Col className="colAlign" sm={12} md={4}>
+            <div className="secTitle">Tech Focus</div>
+            <p className="sectionText">
+              With hands-on experience in the latest technologies, I’ve
+              developed and optimized projects that showcase both functionality
+              and design. I specialize in using the following tools and
+              languages to create dynamic, responsive web experiences:
+            </p>
+
+            <ul className="techList">
+              <li>ReactJS</li>
+              <li>Node.js</li>
+              <li>JavaScript</li>
+            </ul>
+            <ul className="techList">
+              <li>WordPress</li>
+              <li>Wix</li>
+            </ul>
+            <ul className="techList">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>SCSS</li>
+              <li>Bootstrap</li>
+            </ul>
           </Col>
         </Row>
       </Container>

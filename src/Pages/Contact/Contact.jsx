@@ -46,6 +46,7 @@ function Contact() {
       initial="hidden"
       animate="show"
       exit="exit"
+      className="contact"
       style={{ width: "100vw" }}
     >
       <Container>

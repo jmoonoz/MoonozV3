@@ -5,9 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 // import ProjectInfo from "../../Assets/Projects";
 // import ProjectItems from "../../Components/ProjectItems";
 import { slideInLeft, fadeInOut } from "../../animation";
-import "./projects.scss"
-
-
+import "./projects.scss";
 
 function Projects() {
   // const [searchText, setSearchText] = useState("");
@@ -35,7 +33,7 @@ function Projects() {
   // console.log(ProjectInfo.tools);
 
   return (
-    <></>
+    <div className="project"></div>
     // <motion.div
     //   key="/contact"
     //   initial="hidden"

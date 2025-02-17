@@ -4,13 +4,13 @@ export const slideInLeft = {
       x: 0,
       filter: "blur(0px)",
       ease: "easeInOut",
-      transition: { duration: 1.4 },
+      transition: { duration: .8 },
     },
     exit: {
       x: "-120%",
       filter: "blur(5px)",
       ease: "easeOut",
-      transition: { duration: 3 },
+      transition: { duration: .8 },
     },
   };
 
@@ -20,18 +20,18 @@ export const slideInLeft = {
       x: 0,
       filter: "blur(0px)",
       ease: "easeIn",
-      transition: { delay: 0.1, duration: 1, ease: "easeInOut" },
+      transition: { delay: 0.1, duration: .8, ease: "easeInOut" },
     },
     exit: {
       x: "400%",
       filter: "blur(5px)",
       ease: "easeOut",
-      transition: { duration: 3 },
+      transition: { duration: .8 },
     },
   };
 
   export const slideUp = {
-    initial: {
+    hidden: {
       y: "200%",
     },
     show: {
@@ -43,9 +43,9 @@ export const slideInLeft = {
       },
     },
     exit: {
-      y: "-100vh",
+      y: "-100%",
       transition: {
-        duration: .03,
+        duration: .8,
         ease: [0.33, 1, 0.68, 1],
       },
     },

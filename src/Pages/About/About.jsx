@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { slideInLeft, slideInRight, fadeInOut } from "../../animation";
 import "./about.scss";
 import TiltCard from "../../Components/TiltCard/TiltCard";
+import SlideUpText from "../../Components/SlideUpText/SlideUpText";
 
 function About() {
   return (
@@ -24,7 +25,6 @@ function About() {
           </Col>
           <Col className="colAlign" sm={12} md={4}>
             <div className="secTitle">Designer / Creator</div>
-
             <p className="sectionText">
               Joel Muñoz, a graphic designer and web specialist who believes
               that art knows no limits. As a first-generation Mexican American

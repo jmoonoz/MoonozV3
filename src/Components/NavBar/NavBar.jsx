@@ -16,7 +16,9 @@ import FlipLink from "../FlipLink/FlipLink";
 function NavBar() {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+  };
   const handleShow = () => setShow(true);
 
   return (

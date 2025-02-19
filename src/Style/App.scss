@@ -18,11 +18,6 @@ html {
   user-select: none;
 }
 
-body {
-  overflow: scroll;
-  color: white;
-}
-
 body::-webkit-scrollbar,
 .section-style::-webkit-scrollbar,
 .container::-webkit-scrollbar {
@@ -59,6 +54,7 @@ h6,
   padding-top: 15%;
   height: 100vh;
 }
+
 
 p {
   color: #d6d6d6;
@@ -120,8 +116,9 @@ p {
 /*---------------------------
 	Contact
 ----------------------------*/
+
 .form-control {
-  background-color: #212529;
+  background-color: #2125297e;
   height: 50px;
   padding: 6px 15px;
   border-radius: 5px;
@@ -140,7 +137,7 @@ p {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  color: #9fa5ab !important;
 }
 
 .form-button {
@@ -152,6 +149,7 @@ p {
   display: flex;
   justify-content: center;
 }
+
 
 /*---------------------------
 	Project section
@@ -240,24 +238,22 @@ p {
 ----------------------------*/
 
 .offcanvas {
-
   color: #fff;
   backdrop-filter: blur(19px) saturate(158%);
   -webkit-backdrop-filter: blur(19px) saturate(158%);
   background-color: rgba(47, 56, 58, 0.6);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  
+
   :is(.offcanvas-header) {
     justify-content: space-between;
     .navLogo {
       a {
         font-size: 25px;
         font-weight: 900;
-        color: var(--white-text);;
+        color: var(--white-text);
         transition: ease-in-out 500ms;
         text-decoration: none;
-        
       }
     }
   }

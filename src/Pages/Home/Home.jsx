@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Col, Row, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { slideUp } from "../../animation";
+import { imgFadein, slideUp } from "../../animation";
 import Munoz from "../../Images/mexicoHat.png";
 import "./home.scss";
 import FlipLink from "../../Components/FlipLink/FlipLink";
@@ -15,31 +15,25 @@ function Home() {
   return (
     <motion.div
       key="/"
+      initial="hidden"
+      animate="show"
+      exit="exit"
       transition={{
         delayChildren: 0.1,
-        staggerChildren: 3,
-        duration: 2,
+        staggerChildren: 1.5,
+        // duration: 1,
       }}
       className="home"
     >
       <motion.img
-        initial={{ y: 10, opacity: 0 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            delay: 0.9,
-            duration: 0.8,
-            ease: "easeIn",
-          },
-        }}
-        exit={{ y: 10, opacity: 0 }}
+        variants={imgFadein}
         className="heroMe"
         src={Munoz}
       />
       <Container>
         <Row>
           <Col>
+          <SlideUpText>Hi</SlideUpText>
             <div className="heroTitle">
               {lastName.split("").map((l, i) => (
                 <motion.span
@@ -59,8 +53,8 @@ function Home() {
                     y: "100%",
                     rotate: "-9deg",
                     transition: {
-                      duration: 0.9,
-                      // type: "spring",
+                      duration: 0.4,
+                      type: "spring",
                       delay: STAGGER * i,
                       ease: [0.12, 0, 0.39, 0],
                     },
@@ -76,7 +70,7 @@ function Home() {
           <Col xs={7} sm={8} md={8}></Col>
           <Col className="homeDesc" xs={2} sm={2} md={1} lg={1}>
             <motion.div
-              initial="initial"
+              initial="hidden"
               animate="show"
               exit="exit"
               className="homeUnderTitleText"
@@ -89,7 +83,7 @@ function Home() {
               </div>
             </motion.div>
             <motion.div
-              initial="initial"
+              initial="hidden"
               animate="show"
               exit="exit"
               className="homeUnderTitleText2"

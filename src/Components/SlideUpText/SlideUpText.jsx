@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./slideUpText.scss";
+import { slideUp } from "../../animation";
 
 function SlideUpText(prop) {
   const text = prop.children.split("");
-  console.log(text);
+
   const DURATION = 1.8;
   const STAGGER = 0.01;
 
@@ -28,7 +29,8 @@ function SlideUpText(prop) {
             y: "100%",
             rotate: "-9deg",
             transition: {
-              duration: 0.9,
+              duration: 0.4,
+              type: "spring",
               delay: STAGGER * i,
               ease: [0.12, 0, 0.39, 0],
             },

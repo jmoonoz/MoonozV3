@@ -13,14 +13,14 @@
   --bk-img-opacity: 1;
   --white-text: #ffffff;
   --light-white: #ffffff70;
-  overflow: hidden;
+  overflow: scroll;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none;
 }
 
 body {
-  overflow: hidden;
+  overflow: scroll;
   font-family: "Oswald", sans-serif !important;
   color: var(--white-text);
   height: 100%;

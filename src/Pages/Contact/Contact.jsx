@@ -11,7 +11,7 @@ import {
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { slideInLeft, slideInRight, slideUp } from "../../animation";
-import "./contact.scss"
+import "./contact.scss";
 
 const service = import.meta.env.VITE_SERVICE_ID;
 const template = import.meta.env.VITE_TEMPLATE_ID;
@@ -55,8 +55,8 @@ function Contact() {
           <Col sm={9} md={9} lg={9} className="col-hidden">
             <Form ref={form} onSubmit={sendEmail}>
               <Row>
-                <Col sm={12} md={6} lg={6} xl={6}>
-                  <motion.div variants={slideInLeft}>
+                <Col className="item-hidden" sm={12} md={6} lg={6} xl={6}>
+                  <motion.div variants={slideUp}>
                     <Form.Label>First Name:</Form.Label>
                     <Form.Control
                       required
@@ -66,8 +66,8 @@ function Contact() {
                     />
                   </motion.div>
                 </Col>
-                <Col sm={12} md={6} lg={6} xl={6}>
-                  <motion.div variants={slideInRight}>
+                <Col className="item-hidden" sm={12} md={6} lg={6} xl={6}>
+                  <motion.div variants={slideUp}>
                     <Form.Label>Last Name:</Form.Label>
                     <Form.Control
                       required
@@ -78,33 +78,37 @@ function Contact() {
                   </motion.div>
                 </Col>
               </Row>
-              <motion.div variants={slideInLeft}>
-                <Form.Label>Email:</Form.Label>
-                <Form.Control
-                  required
-                  type="email"
-                  placeholder="Example@email.com"
-                  name="email"
-                />
-              </motion.div>
-              <motion.div variants={slideUp}>
-                <Form.Label>Message:</Form.Label>
-                <Form.Control
-                  required
-                  as="textarea"
-                  placeholder="Write to me"
-                  style={{ height: "200px" }}
-                  name="message"
-                />
-                <Form.Text id="emailJS-mention" muted>
-                  Powered by EmailJS
-                </Form.Text>
-                <div className="form-button">
-                  <Button variant="outline-light" type="submit">
-                    Submit
-                  </Button>
-                </div>
-              </motion.div>
+              <div className="item-hidden">
+                <motion.div variants={slideUp}>
+                  <Form.Label>Email:</Form.Label>
+                  <Form.Control
+                    required
+                    type="email"
+                    placeholder="Example@email.com"
+                    name="email"
+                  />
+                </motion.div>
+              </div>
+              <div className="item-hidden">
+                <motion.div  variants={slideUp}>
+                  <Form.Label>Message:</Form.Label>
+                  <Form.Control
+                    required
+                    as="textarea"
+                    placeholder="Write to me"
+                    style={{ height: "200px" }}
+                    name="message"
+                  />
+                  <Form.Text id="emailJS-mention" muted>
+                    Powered by EmailJS
+                  </Form.Text>
+                  <div className="form-button">
+                    <Button variant="outline-light" type="submit">
+                      Submit
+                    </Button>
+                  </div>
+                </motion.div>
+              </div>
             </Form>
           </Col>
         </Row>

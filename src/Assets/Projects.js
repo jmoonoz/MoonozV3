@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import PortfolioV1 from "../Images/portfolioV1.png";
-import PortfolioV2 from "../Images/PortfolioV2.png";
+import PortfolioV2 from "../Images/PortFolioV2.png";
 import ToaStrength from "../Images/ToaStrength.png";
 import Gonz from "../Images/gonz9.png";
 

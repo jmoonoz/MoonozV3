@@ -10,25 +10,7 @@ import "./projects.scss";
 function Projects() {
   const [searchText, setSearchText] = useState("");
   const [projectData, setProjectData] = useState(ProjectInfo);
-  // useEffect(() => {
-  //   if (searchText === "") return;
-  //   setProjectData(() =>
-  //     ProjectInfo.filter((item) =>
-  //       item.name.toLowerCase().match(searchText.toLowerCase())
-  //     )
-  //   );
-  // }, [searchText]);
 
-  // const handleChange = (e) => {
-  //   e.preventDefault();
-  //   setSearchText(e.target.value);
-  //   if (!e.target.value.length > 0) {
-  //     setProjectData(ProjectInfo);
-  //   }
-  // };
-  // const preventD = (e) => {
-  //   e.preventDefault();
-  // };
 
   console.log(ProjectInfo.tools);
 

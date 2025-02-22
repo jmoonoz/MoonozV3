@@ -3,32 +3,32 @@ import { motion } from "framer-motion";
 // import SectionTitle from "../../Components/SectionTitle";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectInfo from "../../Assets/Projects";
-import ProjectItems from "../../Components/ProjectItems";
+import ProjectItems from "../../Components/ProjectItem/ProjectItems";
 import { slideInLeft, fadeInOut } from "../../animation";
 import "./projects.scss";
 
 function Projects() {
   const [searchText, setSearchText] = useState("");
   const [projectData, setProjectData] = useState(ProjectInfo);
-  useEffect(() => {
-    if (searchText === "") return;
-    setProjectData(() =>
-      ProjectInfo.filter((item) =>
-        item.name.toLowerCase().match(searchText.toLowerCase())
-      )
-    );
-  }, [searchText]);
+  // useEffect(() => {
+  //   if (searchText === "") return;
+  //   setProjectData(() =>
+  //     ProjectInfo.filter((item) =>
+  //       item.name.toLowerCase().match(searchText.toLowerCase())
+  //     )
+  //   );
+  // }, [searchText]);
 
-  const handleChange = (e) => {
-    e.preventDefault();
-    setSearchText(e.target.value);
-    if (!e.target.value.length > 0) {
-      setProjectData(ProjectInfo);
-    }
-  };
-  const preventD = (e) => {
-    e.preventDefault();
-  };
+  // const handleChange = (e) => {
+  //   e.preventDefault();
+  //   setSearchText(e.target.value);
+  //   if (!e.target.value.length > 0) {
+  //     setProjectData(ProjectInfo);
+  //   }
+  // };
+  // const preventD = (e) => {
+  //   e.preventDefault();
+  // };
 
   console.log(ProjectInfo.tools);
 
@@ -64,6 +64,8 @@ function Projects() {
                   title={item.name}
                   desc={item.desc}
                   img={item.img}
+                  link={item.link}
+                  linkName={item.linkName}
                   tool={item.tools}
                 />
               </motion.div>

@@ -41,4 +41,9 @@ body {
     hsl(180deg 20% 1%) 84%,
     hsl(0deg 0% 0%) 100%
   );
+
+  a {
+    color: var(--white-text);
+    text-decoration: none;
+  }
 }

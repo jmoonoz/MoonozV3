@@ -158,7 +158,6 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 5rem;
-  margin-top: 5rem;
 }
 
 /*---------------------------
@@ -172,12 +171,10 @@ p {
 .card-img-top {
   object-fit: cover;
   max-height: 180px;
-  filter: grayscale(1);
 }
 
 .card:hover {
   :is(.card-img-top) {
-    filter: grayscale(0);
   }
 }
 
@@ -207,7 +204,6 @@ p {
 
 .project-item-description {
   font-size: 1.6rem;
-  margin-top: 1rem;
 }
 
 .offcanvas {

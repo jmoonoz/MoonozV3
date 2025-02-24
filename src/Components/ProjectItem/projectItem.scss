@@ -6,7 +6,7 @@
 .card-img-top {
   object-fit: cover;
   max-height: 180px;
-  filter: grayscale(1);
+  filter: grayscale(0.6);
 }
 
 .card:hover {
@@ -54,8 +54,7 @@
 
 .tools {
   display: flex !important;
-  gap: 5px;
-
+  gap: 6px;
   :is(.tools-Item) {
     font-weight: 100 !important;
   }
@@ -80,40 +79,52 @@
   }
 }
 
-// off canvas
+/*---------------------------
+	Off canvas
+----------------------------*/
 
 .offcanvas {
-    color: #fff;
-    backdrop-filter: blur(19px) saturate(158%);
-    -webkit-backdrop-filter: blur(19px) saturate(158%);
-    background-color: rgba(19, 23, 25, 0.6);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-  
-    :is(.offcanvas-header) {
-      justify-content: space-between;
-      .navLogo {
-        a {
-          font-size: 25px;
-          font-weight: 900;
-          color: var(--white-text);
-          transition: ease-in-out 500ms;
-          text-decoration: none;
-        }
+  color: #fff;
+  backdrop-filter: blur(19px) saturate(158%);
+  -webkit-backdrop-filter: blur(19px) saturate(158%);
+  background-color: rgba(19, 23, 25, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  :is(.offcanvas-header) {
+    justify-content: space-between;
+    .navLogo {
+      a {
+        font-size: 25px;
+        font-weight: 900;
+        color: var(--white-text);
+        transition: ease-in-out 500ms;
+        text-decoration: none;
       }
     }
-  
-    :is(.offcanvas-body) {
-      font-weight: 100;
-    }
-    .tools-Item{
-        padding: 5px;
-        border-radius: 5px;
-        font-weight: 600 ;
-        background-color: rgba(53, 64, 69, 0.854);
-    }
   }
-  
+
+  :is(.offcanvas-body) {
+    font-weight: 100;
+  }
+  .tools-Item {
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: rgba(53, 64, 69, 0.854);
+  }
+}
+/*---------------------------
+	off cavnas bottom link
+----------------------------*/
+
+.off-canvas-bottom-link {
+  height: 10%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media only screen and (max-width: 768px) {
   .projects-item-img {

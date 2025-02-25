@@ -24,7 +24,6 @@ function ProjectItems({ title, img, desc, link, linkName, tool }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  console.log(tool[1]);
   const mappedArray = customMapWithBreak(tool, (item) => item * 2, 3);
 
   return (
@@ -53,7 +52,7 @@ function ProjectItems({ title, img, desc, link, linkName, tool }) {
         <Offcanvas.Body>
           <div>
             <h6>About</h6>
-            {desc}
+            <p>{desc}</p>
           </div>
           <div>
             <h6>Technologies:</h6>
